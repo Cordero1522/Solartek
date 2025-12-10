@@ -6,281 +6,345 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLARTEK</title>
-    <link rel="icon" href="main/icono.ico" type="image/x-icon">
+    <title>Solartek</title>
+    <link rel="icon" href="images/icono.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="main/style.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <!-- Header -->
     <header>
-        <div class="container">
-            <nav class="navbar">
-                <a class="navbar-brand" href="#home">
-                    <img src="https://via.placeholder.com/300x90/ffffff/0f4a7a?text=AttiHeat+Logo" alt="SOLARTEK" class="img-fluid">
-                </a>
-                
-                <div class="mobile-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-                
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#equipment">Equipment</a></li>
-                    <li><a href="#results">Results</a></li>
-                    <li><a href="#specifications">Specifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+        <div class="container header-container" id="home">
+            <a class="navbar-brand" href="#home">
+                <img src="images/logo.png" alt="Logo" class="img-fluid">
+            </a>
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#galeria">Gallery</a>
+                <a href="#beneficios">Benefits</a>
+                <a href="#antes-despues">Comparison</a>
+                <a href="#especificaciones">Specifications</a>
+                <a href="#caracteristicas">Features</a>
+                <a href="#cotizacion">Quote</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
-            <h1>Extend Your Pool Season All Year Round</h1>
-            <p>Solartek innovative pool heating system captures wasted heat from your attic and transfers it to your pool water, allowing you to enjoy comfortable swimming temperatures even during colder months. Energy-efficient, eco-friendly, and cost-effective.</p>
-            <div class="hero-btns">
-                <a href="#specifications" class="btn btn-primary">View Specifications</a>
-                <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-            </div>
+            <h1>Heat Your Pool with Attic Energy</h1>
+            <p>An innovative system that extracts heat from your home's attic to keep your pool at a comfortable temperature for nine months, without fossil fuels, without solar panels, and without chemicals.</p>
+            <a href="#cotizacion" class="btn">Request Quote</a>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="section-primary-light" id="how-it-works">
+    <!-- Galería de fotos -->
+    <section id="galeria" class="gallery-section">
         <div class="container">
-            <h2>How Solartek Works</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-temperature-high"></i>
-                    </div>
-                    <h3>Capture Attic Heat</h3>
-                    <p>Our system efficiently captures excess heat that builds up in your attic space, even during winter months when outdoor temperatures are low.</p>
+            <div class="gallery-title">
+                <h3>Our Attic Installation System</h3>
+                <p>Compact and efficient equipment designed for easy installation in your home's attic</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/Image 1.jpg" alt="Image I" class="gallery-img">
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <h3>Heat Transfer</h3>
-                    <p>A high-efficiency heat exchanger transfers the captured thermal energy from your attic to your pool water.</p>
+                <div class="gallery-item">
+                    <img src="images/Image 2.jpg" alt="Image II" class="gallery-img">
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-swimming-pool"></i>
-                    </div>
-                    <h3>Warm Pool Water</h3>
-                    <p>The heated water returns to your pool, raising and maintaining a comfortable temperature for swimming regardless of outdoor conditions.</p>
+                <div class="gallery-item">
+                    <img src="images/Image 3.jpg" alt="Image III" class="gallery-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Equipment Gallery Section -->
-    <section class="section-light" id="equipment">
+    <!-- Beneficios Section -->
+    <section id="beneficios" class="benefits">
         <div class="container">
-            <h2>Our Equipment</h2>
-            <p class="text-center mb-5">Advanced installation of high-efficiency pool heating systems engineered for superior thermal performance. Our technology delivers optimized heat transfer and energy conservation through precision calibration and seamless integration with existing pool infrastructure.</p>
-            
-            <div class="equipment-gallery">
-                <div class="equipment-item">
-                    <img src="images/Image 1.jpg" alt="Image I" class="equipment-img">
-                </div>
-                
-                <div class="equipment-item">
-                    <img src="images/Image 2.jpg" alt="Image II" class="equipment-img">
-                </div>
-                
-                <div class="equipment-item">
-                    <img src="images/Image 3.jpg" alt="Image III" class="equipment-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Temperature Results Section -->
-    <section class="section-primary-light" id="results">
-        <div class="container">
-            <h2>Temperature Results</h2>
-            <p class="text-center mb-5">Experience firsthand the significant enhancement Solartek brings to your aquatic enjoyment. Our technology delivers reliable, comfortable temperatures that extend your swimming season and transform how you use your pool, creating inviting warmth.</p>
-            
-            <div class="temp-comparison-container">
-                <div class="temp-comparison-card">
-                    <img src="images/BeforeAfter.jpg" alt="Swimming Pool with AttiHeat System" class="pool-main-image">
-                    
-                    <div class="temp-comparison">
-                        <!-- BEFORE -->
-                        <div class="temp-item temp-before">
-                            <div class="temp-label">
-                                BEFORE Solartek
-                            </div>
-                            <div class="temp-value">50°F</div>
-                            <div class="temp-icons">
-                                <i class="fas fa-thermometer-empty temp-icon"></i>
-                                <i class="fas fa-snowflake temp-icon"></i>
-                            </div>
-                        </div>
-                        
-                        <!-- Arrow separator -->
-                        <div class="comparison-arrow">
-                            <i class="fas fa-long-arrow-alt-right"></i>
-                        </div>
-                        
-                        <!-- WITH -->
-                        <div class="temp-item temp-after">
-                            <div class="temp-label">
-                                WITH Solartek
-                            </div>
-                            <div class="temp-value">86°F</div>
-                            <div class="temp-icons">
-                                <i class="fas fa-thermometer-full temp-icon"></i>
-                                <i class="fas fa-sun temp-icon"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specifications Section -->
-    <section class="section-light" id="specifications">
-        <div class="container">
-            <h2>Product Specifications</h2>
-            <div class="specs-container">
-                <div class="specs-list">
-                    <h3>Performance & Capacity</h3>
-                    <ul>
-                        <li><span class="spec-label">Pool Sizes:</span> Up to 1000 sq ft or 35,000 gallons</li>
-                        <li><span class="spec-label">Nominal BTU Rating:</span> 60,000 BTUs/hour @ Δ32°F</li>
-                        <li><span class="spec-label">BTU Transfer Range:</span> 20,000-150,000 BTU's per hour</li>
-                        <li><span class="spec-label">Operating Cost:</span> Less than $15 per month</li>
-                        <li><span class="spec-label">Example:</span> Pool water input: 72°F & Attic's Peak @ 104°F</li>
-                    </ul>
-                </div>
-                
-                <div class="specs-list">
-                    <h3>Physical Specifications</h3>
-                    <ul>
-                        <li><span class="spec-label">Size:</span> 27"H x 17"D x 47"W</li>
-                        <li><span class="spec-label">Weight:</span> 136 lbs (Boxed: 145 lbs)</li>
-                        <li><span class="spec-label">Power:</span> 115 VAC, 3.6 AMPS @ Full Load (405 watts max)</li>
-                        <li><span class="spec-label">Noise Level:</span> Very quiet - 62 db A-weighted, 67 db C-weighted @10 feet</li>
-                        <li><span class="spec-label">Attic Space Required:</span> 3 ft min height to peak and square feet of attic floor equal to or greater than pool surface area</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="section-primary-dark" id="benefits">
-        <div class="container">
-            <h2>Why Choose Solartek?</h2>
-            <div class="benefits">
-                <div class="benefit">
+            <h2>Why Choose Our System?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
                     <div class="benefit-icon">
-                        <i class="fas fa-ban"></i>
+                        <i class="fas fa-fire"></i>
                     </div>
                     <h3>No Fossil Fuels</h3>
-                    <p>Uses waste heat already present in your home, reducing reliance on gas or propane heaters.</p>
+                    <p>Utilizes waste heat from your home's attic, eliminating the need for natural gas, propane, or other fuels.</p>
                 </div>
-                
-                <div class="benefit">
+                <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-sun"></i>
                     </div>
                     <h3>No Solar Panels</h3>
-                    <p>No solar panel installation required. Utilizes existing attic heat.</p>
+                    <p>Does not require installation of complex or costly solar panels on your home's roof.</p>
                 </div>
-                
-                <div class="benefit">
+                <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-leaf"></i>
                     </div>
                     <h3>No CFC Chemicals</h3>
-                    <p>Environmentally friendly with no harmful refrigerants or chemicals.</p>
+                    <p>Eco-friendly system that does not use harmful chemical refrigerants for the environment.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Automated Features Section -->
-    <section class="section-primary-light" id="automated">
+    <!-- Before/After Section -->
+    <section id="antes-despues" class="before-after-section">
         <div class="container">
-            <h2>Advanced Automated Features</h2>
-            <div class="automated-features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-thermometer-half feature-icon"></i>
-                    <h3>Adjustable Thermostat</h3>
-                    <p>Set your desired pool temperature with precision control for consistent comfort.</p>
+            <h2>Temperature Transformation</h2>
+            <div class="before-after-container">
+                <div class="temperature-comparison">
+                    <div class="temp-card before-temp">
+                        <div class="temp-title">Before</div>
+                        <div class="temp-value">59°F</div>
+                        <div class="temp-icons">
+                            <i class="fas fa-snowflake"></i>
+                            <i class="fas fa-thermometer-empty"></i>
+                        </div>
+                        <div class="temp-desc">Typical pool temperature without heating in cold season</div>
+                    </div>
+                    
+                    <div class="temp-card after-temp">
+                        <div class="temp-title">After</div>
+                        <div class="temp-value">86°F</div>
+                        <div class="temp-icons">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-thermometer-full"></i>
+                        </div>
+                        <div class="temp-desc">Ideal temperature achieved with our heat transfer system</div>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <i class="fas fa-tint feature-icon"></i>
-                    <h3>Motorized CPVC Solar Valve</h3>
-                    <p>Automatically controls heat transfer with durable, corrosion-resistant components.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-snowflake feature-icon"></i>
-                    <h3>Freeze Protection</h3>
-                    <p>Optional automatic drain-down system protects your investment during freezing conditions.</p>
+                <div>
+                    <img src="images/BeforeAfter.jpg" alt="Family enjoying warm pool" class="comparison-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="contact">
+    <!-- Especificaciones Section -->
+    <section id="especificaciones" class="specs">
         <div class="container">
-            <h2>Ready to Enjoy Your Pool Year-Round?</h2>
-            <p>Contact us today for a free consultation and quote. Our team of experts will assess your attic space and pool requirements to determine the perfect Solartek solution for your home.</p>
-            <p href="phone" ><i class="fas fa-phone-alt"></i> Call Now: 1-800-555-1234</p>
-            <p href="email" ><i class="fas fa-envelope"></i> Send Now: 1-800-555-1234</p>
-        </div>
-    </section>
-
-    <!-- Footer - DARK -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>AttiHeat</h3>
-                    <p>Providing innovative attic pool heating solutions to extend your swimming season while reducing energy costs and environmental impact.</p>
-                    <p><strong>Made in USA</strong></p>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
+            <h2>Technical Specifications</h2>
+            <div class="specs-container">
+                <div class="specs-list">
+                    <h3>System Details</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#equipment">Equipment</a></li>
-                        <li><a href="#results">Results</a></li>
-                        <li><a href="#specifications">Specifications</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><strong>Pool Sizes:</strong> Up to 1000 square feet or 35,000 gallons</li>
+                        <li><strong>BTU Rating:</strong> 60,000 BTU's/hour @ Δ32°F</li>
+                        <li><strong>Example:</strong> Pool water at 72°F and Attic at 104°F</li>
+                        <li><strong>Transfer Range:</strong> 20,000-150,000 BTU's per hour</li>
+                        <li><strong>Dimensions:</strong> 27" Height x 17" Depth x 47" Width</li>
+                        <li><strong>Weight:</strong> 136 lbs (145 lbs packaged)</li>
+                        <li><strong>Power:</strong> 115 VAC 3.6 AMPS at full load (405 watts max)</li>
                     </ul>
                 </div>
-                
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
+                <div class="specs-highlight">
+                    <h3>Requirements and Features</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i>  123 Energy Ave, San Diego, CA</li>
-                        <li><i class="fas fa-phone"></i> 1-800-555-1234</li>
-                        <li><i class="fas fa-envelope"></i> info@attiheat.com</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM PST</li>
+                        <li><strong>Required Attic Space:</strong> Minimum height of 3 feet to the peak and square feet of attic floor equal to or greater than the pool surface area</li>
+                        <li><strong>Noise Level:</strong> Very quiet: 62 db (A-weighted) 67 db (C-weighted) @10 feet</li>
+                        <li><strong>Operating Cost:</strong> Less than $15 per month</li>
+                        <li><strong>Freeze Protection:</strong> Optional automatic drain-down</li>
+                        <li><strong>Manufacturing:</strong> Made in USA</li>
+                        <li><strong>Patents:</strong> US patents issued</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características Section -->
+    <section id="caracteristicas" class="features">
+        <div class="container">
+            <h2>Automated Features</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3>Adjustable Thermostat</h3>
+                    <p>Maintain your pool's ideal temperature with a precise and easy-to-adjust thermostat.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Solid-State Circuits</h3>
+                    <p>Reliable technology that ensures stable and durable operation.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Motorized CPVC Solar Valve</h3>
+                    <p>Automated water flow control for optimal heat transfer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario Section -->
+    <section id="cotizacion" class="form-section">
+        <div class="container">
+            <h2>Request Your Quote</h2>
+            <div class="form-container">
+                <div class="form-info">
+                    <h3>Ready to enjoy your pool in cold season?</h3>
+                    <p>Complete the form and one of our experts will contact you to provide a personalized quote and schedule an evaluation of your attic.</p>
+                    <p>Our system is available for installation throughout Texas. All data will be handled securely.</p>
+                </div>
+                <div class="form-box">
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="municipio">City *</label>
+                            <select id="municipio" class="form-control" required>
+                                <option value="">Select your city</option>
+                                <option value="Abilene">Abilene</option>
+                                <option value="Allen">Allen</option>
+                                <option value="Amarillo">Amarillo</option>
+                                <option value="Arlington">Arlington</option>
+                                <option value="Austin">Austin</option>
+                                <option value="Baytown">Baytown</option>
+                                <option value="Beaumont">Beaumont</option>
+                                <option value="Bedford">Bedford</option>
+                                <option value="Brownsville">Brownsville</option>
+                                <option value="Bryan">Bryan</option>
+                                <option value="Burleson">Burleson</option>
+                                <option value="Carrollton">Carrollton</option>
+                                <option value="Cedar Hill">Cedar Hill</option>
+                                <option value="Cedar Park">Cedar Park</option>
+                                <option value="College Station">College Station</option>
+                                <option value="Conroe">Conroe</option>
+                                <option value="Coppell">Coppell</option>
+                                <option value="Corpus Christi">Corpus Christi</option>
+                                <option value="Dallas">Dallas</option>
+                                <option value="Denton">Denton</option>
+                                <option value="DeSoto">DeSoto</option>
+                                <option value="Duncanville">Duncanville</option>
+                                <option value="Edinburg">Edinburg</option>
+                                <option value="El Paso">El Paso</option>
+                                <option value="Euless">Euless</option>
+                                <option value="Flower Mound">Flower Mound</option>
+                                <option value="Fort Worth">Fort Worth</option>
+                                <option value="Frisco">Frisco</option>
+                                <option value="Friendswood">Friendswood</option>
+                                <option value="Galveston">Galveston</option>
+                                <option value="Garland">Garland</option>
+                                <option value="Georgetown">Georgetown</option>
+                                <option value="Grand Prairie">Grand Prairie</option>
+                                <option value="Grapevine">Grapevine</option>
+                                <option value="Haltom City">Haltom City</option>
+                                <option value="Harlingen">Harlingen</option>
+                                <option value="Houston">Houston</option>
+                                <option value="Huntsville">Huntsville</option>
+                                <option value="Hurst">Hurst</option>
+                                <option value="Irving">Irving</option>
+                                <option value="Keller">Keller</option>
+                                <option value="Killeen">Killeen</option>
+                                <option value="Lancaster">Lancaster</option>
+                                <option value="Laredo">Laredo</option>
+                                <option value="League City">League City</option>
+                                <option value="Lewisville">Lewisville</option>
+                                <option value="Longview">Longview</option>
+                                <option value="Lubbock">Lubbock</option>
+                                <option value="Mansfield">Mansfield</option>
+                                <option value="McAllen">McAllen</option>
+                                <option value="McKinney">McKinney</option>
+                                <option value="Mesquite">Mesquite</option>
+                                <option value="Midland">Midland</option>
+                                <option value="Mission">Mission</option>
+                                <option value="Missouri City">Missouri City</option>
+                                <option value="New Braunfels">New Braunfels</option>
+                                <option value="North Richland Hills">North Richland Hills</option>
+                                <option value="Odessa">Odessa</option>
+                                <option value="Pasadena">Pasadena</option>
+                                <option value="Pearland">Pearland</option>
+                                <option value="Pflugerville">Pflugerville</option>
+                                <option value="Pharr">Pharr</option>
+                                <option value="Plano">Plano</option>
+                                <option value="Port Arthur">Port Arthur</option>
+                                <option value="Richardson">Richardson</option>
+                                <option value="Rockwall">Rockwall</option>
+                                <option value="Round Rock">Round Rock</option>
+                                <option value="Rowlett">Rowlett</option>
+                                <option value="San Angelo">San Angelo</option>
+                                <option value="San Antonio">San Antonio</option>
+                                <option value="San Marcos">San Marcos</option>
+                                <option value="Sherman">Sherman</option>
+                                <option value="Sugar Land">Sugar Land</option>
+                                <option value="Temple">Temple</option>
+                                <option value="Texarkana">Texarkana</option>
+                                <option value="Texas City">Texas City</option>
+                                <option value="The Colony">The Colony</option>
+                                <option value="Tyler">Tyler</option>
+                                <option value="Victoria">Victoria</option>
+                                <option value="Waco">Waco</option>
+                                <option value="Weslaco">Weslaco</option>
+                                <option value="Wichita Falls">Wichita Falls</option>
+                                <option value="Wylie">Wylie</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="Describe your pool, size, and any additional information you consider relevant..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Request Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-logo">Solar<span>Tek</span></div>
+                    <p>Innovative pool heating system that uses waste heat from your home's attic. Patented US technology.</p>
+                    <p><strong>Made in USA</strong></p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#galeria">Gallery</a></li>
+                        <li><a href="#beneficios">Benefits</a></li>
+                        <li><a href="#antes-despues">Comparison</a></li>
+                        <li><a href="#especificaciones">Specifications</a></li>
+                        <li><a href="#caracteristicas">Features</a></li>
+                        <li><a href="#cotizacion">Request Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 1-800-728-9253</li>
+                        <li><i class="fas fa-envelope"></i> contact@solartek.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Texas, USA</li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main/script.js"></script>
 </body>
 </html>
