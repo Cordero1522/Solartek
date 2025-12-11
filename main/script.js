@@ -10,75 +10,108 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// URL de tu Google Apps Script (REEMPLAZA ESTA URL CON LA TUYA)
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby6R4lUubRMBu96MmpHpluuRwy7dtkpXyTkn4FHUMAdGGv9ScygeE0Np6wRqYz0pcSxrA/exec';
+const form = document.getElementById("form");
+      const submitButton = document.getElementById("submit-button");
+      const messageDiv = document.getElementById("message");
+      const fileInput = document.getElementById("fileInput");
+      const fileNameDisplay = document.getElementById("fileNameDisplay");
 
-// Manejo del formulario
-document.getElementById('quoteForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    // Mostrar indicador de carga
-    const submitButton = this.querySelector('button[type="submit"]');
-    const originalText = submitButton.textContent;
-    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-    submitButton.disabled = true;
-    
-    try {
-        // Recopilar datos del formulario
-        const formData = {
-            name: document.getElementById('name').value.trim(),
-            email: document.getElementById('email').value.trim(),
-            phone: document.getElementById('phone').value.trim(),
-            municipio: document.getElementById('municipio').value,
-            message: document.getElementById('message').value.trim(),
-            timestamp: new Date().toISOString()
-        };
-        
-        // Validación básica
-        if (!formData.name || !formData.email || !formData.phone || !formData.municipio) {
-            throw new Error('Por favor completa todos los campos requeridos');
-        }
-        
-        // Enviar datos a Google Apps Script
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
-            method: 'POST',
-            mode: 'cors', // Cambiado a cors
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        });
-        
-        // Verificar si la respuesta fue exitosa
-        if (!response.ok) {
-            const errorText = await response.text();
-            throw new Error(`Error del servidor: ${response.status} ${errorText}`);
-        }
-        
-        const result = await response.json();
-        
-        if (result.result === "success") {
-            // Mostrar mensaje de éxito
-            showNotification('¡Gracias por tu solicitud! Te contactaremos en un plazo de 24-48 horas.', 'success');
-            
-            // Limpiar formulario
-            document.getElementById('quoteForm').reset();
-            
-            // Scroll suave a la sección de inicio
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+      // Update displayed filename on file selection
+      fileInput.addEventListener("change", function () {
+        if (this.files && this.files.length > 0) {
+          fileNameDisplay.textContent = this.files[0].name;
         } else {
-            throw new Error(result.message || 'Error al procesar la solicitud');
+          fileNameDisplay.textContent = "No file selected";
         }
-        
-    } catch (error) {
-        console.error('Error:', error);
-        showNotification(error.message || 'Hubo un error al enviar tu solicitud. Por favor, intenta nuevamente.', 'error');
-    } finally {
-        // Restaurar botón
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-    }
-});
+      });
+
+      // Function to handle file upload
+      async function uploadFile(file) {
+        return new Promise((resolve, reject) => {
+          const fr = new FileReader();
+          fr.onload = (e) => {
+            const data = e.target.result.split(",");
+            const obj = {
+              fileName: file.name,
+              mimeType: data[0].match(/:(\w.+);/)[1],
+              data: data[1],
+            };
+            resolve(obj);
+          };
+          fr.onerror = reject;
+          fr.readAsDataURL(file);
+        });
+      }
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        messageDiv.textContent = "Submitting...";
+        messageDiv.style.display = "block";
+        messageDiv.style.backgroundColor = "beige";
+        messageDiv.style.color = "black";
+        submitButton.disabled = true;
+        submitButton.classList.add("is-loading");
+
+        try {
+          const formData = new FormData(this);
+          const formDataObj = {};
+
+          // Convert FormData to object
+          for (let [key, value] of formData.entries()) {
+            formDataObj[key] = value;
+          }
+
+          // Handle file upload if a file is selected
+          if (fileInput.files.length > 0) {
+            const fileObj = await uploadFile(fileInput.files[0]);
+            formDataObj.fileData = fileObj; // Add file data to form data
+          }
+
+          // Submit form data
+          const scriptURL ="https://script.google.com/macros/s/AKfycbyde7nc0n_UXM8v4LSAnnuXhEQhUJJPEU0bdDYf2ibtVSYj4_O9BB4WTPRfnFgdm7Pi/exec";
+
+          const response = await fetch(scriptURL, {
+            redirect: "follow",
+            method: "POST",
+            body: JSON.stringify(formDataObj),
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          });
+
+          const data = await response.json();
+
+          if (data.status === "success") {
+            messageDiv.textContent =
+              data.message || "Data submitted successfully!";
+            messageDiv.style.backgroundColor = "#48c78e";
+            messageDiv.style.color = "white";
+            form.reset();
+            fileNameDisplay.textContent = "No file selected";
+          } else {
+            throw new Error(data.message || "Submission failed");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          messageDiv.textContent = "Error: " + error.message;
+          messageDiv.style.backgroundColor = "#f14668";
+          messageDiv.style.color = "white";
+        } finally {
+          submitButton.disabled = false;
+          submitButton.classList.remove("is-loading");
+
+          setTimeout(() => {
+            messageDiv.textContent = "";
+            messageDiv.style.display = "none";
+          }, 4000);
+        }
+      });
+
+      // Enhance cancel button to reset file input display
+      const cancelButton = form.querySelector("button.is-danger");
+      cancelButton.addEventListener("click", function () {
+        form.reset();
+        fileNameDisplay.textContent = "No file selected";
+        messageDiv.style.display = "none";
+      });

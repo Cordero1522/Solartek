@@ -214,19 +214,19 @@
                     <form id="quoteForm">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" id="name" class="form-control" required name="name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" id="email" class="form-control" required name="email">
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" class="form-control" required>
+                            <input type="tel" id="phone" class="form-control" required name="phone">
                         </div>
                         <div class="form-group">
-                            <label for="municipio">City *</label>
-                            <select id="municipio" class="form-control" required>
+                            <label for="city">City *</label>
+                            <select id="municipio" class="form-control" required name="city">
                                 <option value="">Select your city</option>
                                 <option value="Abilene">Abilene</option>
                                 <option value="Allen">Allen</option>
@@ -315,7 +315,7 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message (Optional)</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Describe your pool, size, and any additional information you consider relevant..."></textarea>
+                            <textarea id="message" class="form-control" rows="5" name="message" placeholder="Describe your pool, size, and any additional information you consider relevant..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Request Quote</button>
                     </form>
