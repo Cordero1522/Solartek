@@ -314,6 +314,56 @@
                             </select>
                         </div>
                         <div class="form-group">
+                        <label for="address">Address *</label>
+                        <input type="text" id="address" class="form-control" required name="address" placeholder="Street address, apartment, suite, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="poolSize">Pool Size *</label>
+                        <div class="dimension-inputs">
+                            <div class="dimension-field">
+                                <input type="number" id="poolLength" class="form-control" required name="pool_length" placeholder="Length (ft)" min="1" step="0.1">
+                                <span class="dimension-label">ft</span>
+                            </div>
+                            <div class="dimension-separator">×</div>
+                            <div class="dimension-field">
+                                <input type="number" id="poolWidth" class="form-control" required name="pool_width" placeholder="Width (ft)" min="1" step="0.1">
+                                <span class="dimension-label">ft</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Do you have attic space? *</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="do you have attic space?" value="yes" required>
+                                <span class="radio-checkmark"></span>
+                                Yes
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="do you have attic space?" value="no" required>
+                                <span class="radio-checkmark"></span>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Is your attic hot in the summer? *</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="is your attic hot in the summer?" value="yes" required>
+                                <span class="radio-checkmark"></span>
+                                Yes
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="is your attic hot in the summer?" value="no" required>
+                                <span class="radio-checkmark"></span>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                        <div class="form-group">
                             <label for="message">Message (Optional)</label>
                             <textarea id="message" class="form-control" rows="5" name="message" placeholder="Describe your pool, size, and any additional information you consider relevant..."></textarea>
                         </div>
